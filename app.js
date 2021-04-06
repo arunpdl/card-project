@@ -105,6 +105,6 @@ app.get("*", function (req, res) {
   res.send("Error, page not found");
 });
 
-http.listen(3024, function () {
-  console.log("listening on *:3024");
+http.listen(process.env.PORT || 3024, function () {
+  console.log("listening on port " + (process.env.PORT || 3024));
 });
